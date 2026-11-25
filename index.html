@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS task</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="main-container"> 
+        
+        <!-- DIGITAL CLOCK -->
+        <section class="digitalclock">
+            <div class="container">
+                <h2>Current Time</h2>
+
+                <div class="clock">
+                    <span id="hrs">00</span>
+                    <span>:</span>
+                    <span id="min">00</span>
+                    <span>:</span>
+                    <span id="sec">00</span>
+                </div>
+
+                <div class="date">
+                    <h2 id="fulldate"></h2>
+                    <p id="shortdate"></p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- stopwatch -->
+        <section class="stopwatch">
+
+            <h2>Stopwatch</h2>
+            <h1 id="displaytime">00:00:00</h1>
+
+            <div class="buttons">
+                <button onclick="watchstart()" title="Start">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button onclick="watchstop()" title="Pause">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+
+                <button onclick="watchreset()" title="Reset">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- world clock -->
+         <section class="worldclock">
+            <h1>World Clock</h1>
+            <div class="clock-container" id="clockContainer"></div>
+            <div class="city-select">
+                <h2>Select a City</h2>
+                <select id="citySelect">
+                    <option value="">Choose a city</option>
+                    <option value="Asia/Kolkata">India</option>
+                    <option value="Europe/London">London</option>
+                    <option value="America/New_York">New York</option>
+                    <option value="Asia/Dubai">Dubai</option>
+                    <option value="Asia/Tokyo">Tokyo</option>                    
+                </select>
+
+                <div class="selected-city" id="selectedCity"></div>
+
+            </div>
+        </section>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
